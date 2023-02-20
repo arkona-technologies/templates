@@ -22,3 +22,8 @@ IP=<your-at300-ip-address> npm run gateway-static-ips
 
 where multicast destination addresses are read from the file `ip-processing-gateway/example_address_schema.json`.
 
+
+If you wish to use HTTP Basic Auth you may also access the script and it's set of cli arguments via
+```sh 
+npm run gateway -- --help
+```
