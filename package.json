@@ -1,8 +1,5 @@
 {
   "dependencies": {
-    "vapi": "http://172.16.210.107/vapi.tar.gz",
-    "vscript": "http://172.16.210.107/vscript.tar.gz",
-    "vutil": "http://172.16.210.107/vutil.tar.gz",
     "yargs": "^17.7.0"
   },
   "type": "module",
