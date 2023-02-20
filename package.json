@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "vapi": "http://172.16.210.107/vapi.tar.gz",
+    "vscript": "http://172.16.210.107/vscript.tar.gz",
+    "vutil": "http://172.16.210.107/vutil.tar.gz",
+    "yargs": "^17.7.0"
+  },
+  "type": "module",
+  "scripts": {
+    "setup": "mkdir -p node_modules && npm r vapi vscript vutil && npm i http://$IP/vscript.tar.gz http://$IP/vapi.tar.gz http://$IP/vutil.tar.gz",
+    "gateway": "cd ip-processing-gateway && NODE_OPTIONS='--loader ts-node/esm --no-warnings' node template.ts",
+    "gateway-dynamic-ips": "cd ip-processing-gateway && NODE_OPTIONS='--loader ts-node/esm --no-warnings' node template.ts --target_ip=$IP",
+    "gateway-static-ips": "cd ip-processing-gateway && NODE_OPTIONS='--loader ts-node/esm --no-warnings' node template.ts --mcast_addr_schema=example_address_schema.json --target_ip=$IP"
+  },
+  "devDependencies": {
+    "@types/yargs": "^17.0.13",
+    "ts-node": "^10.9.1"
+  }
+}
